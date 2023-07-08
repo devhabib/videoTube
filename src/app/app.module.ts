@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VideoWatchComponent } from './components/video-watch/video-watch.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { VideoSearchComponent } from './components/video-search/video-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { VideoSearchComponent } from './components/video-search/video-search.com
     AppRoutingModule,
     HttpClientModule,
     LayoutsModule,
-    NgbModule
+    NgbModule,
+    FormsModule
 
   ],
   providers: [],

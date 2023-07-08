@@ -1,0 +1,43 @@
+aside {
+    background-color: darken($color: $primary-color, $amount: 5);
+    position: fixed;
+    height: calc(100vh - 65px);
+    top: 65px;
+    left: 0;
+    max-width: 200px;
+    width: 100%;
+    z-index: 999;
+    ul {
+        list-style: none;
+        li {
+            margin-bottom: 5px;
+            a {
+                display: block;
+                padding: 10px 20px;
+                background-color: darken($color: $primary-color, $amount: 10);
+                border-radius: 5px;
+                overflow: hidden;
+                position: relative;
+                color: $text-black;
+                z-index: 1;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: transparent;
+                    transition: 0.3s all;
+                    z-index: -1;
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        background-color: darken($color: $primary-color, $amount: 15);
+                    }
+                }
+            }
+        }
+    }
+}

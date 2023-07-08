@@ -1,0 +1,29 @@
+@import "../../../assets/scss/utils/variables";
+
+.search {
+    padding: 40px 0;
+    &__content {
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        input {
+            border-radius: 5px;
+            width: 100%;
+            padding: 5px 10px;
+            border: 1px solid $primary-color;
+            &:focus {
+                outline: none;
+            }
+        }
+        button {
+            margin-left: -5px;
+        }
+    }
+}
+.primary__btn {
+    background-color: $primary-color;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+}

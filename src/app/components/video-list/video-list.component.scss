@@ -1,0 +1,89 @@
+@import "../../../assets/scss/utils/variables";
+.videos {
+    &__card {
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    }
+    &__thumbnail {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+        transition: 0.3s all ease-in-out;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            transition: 0.3s all ease-in-out;
+            background-color: rgba($color: $white, $alpha: 0.2);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            height: 100%;
+            transition: 0.3s all ease-in-out;
+            width: 0;
+            background-color: rgba($color: $white, $alpha: 0.2);
+        }
+        &:hover {
+            &::before,
+            &::after {
+                width: 100%;
+            }
+        }
+        p {
+            position: absolute;
+            background-color: rgba($color: $text-black, $alpha: 0.9);
+            color: $white;
+            bottom: 10px;
+            margin: 0;
+            right: 5px;
+            padding: 3px 4px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 10;
+        }
+    }
+    &__about {
+        position: relative;
+        padding: 0 5px 10px 5px;
+        &--title {
+            h2 {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &--details {
+            p {
+                margin-bottom: 0;
+                font-size: 12px;
+            }
+            span {
+                width: 5px;
+                height: 5px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: $text-black;
+                vertical-align: middle;
+                margin: 0 4px;
+            }
+        }
+    }
+}

@@ -1,1 +1,23 @@
-<p>video-list works!</p>
+<section class="videos">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let item of videos">
+        <div class="videos__card">
+          <div class="videos__thumbnail">
+            <img [src]="item.thumbnailUrl" alt="" />
+            <p>{{ item.duration }} Min</p>
+          </div>
+          <div class="videos__about">
+            <div class="videos__about--title">
+              <h2 [title]="item.title">{{ item.title }}</h2>
+            </div>
+            <div class="videos__about--details">
+              <p>Author: {{ item.author }}</p>
+              <p>{{ item.uploadTime }} <span></span> {{ item.views }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

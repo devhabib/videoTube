@@ -1,0 +1,25 @@
+header,
+.header {
+    background-color: $header-bg;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    &__logo {
+        p {
+            font-weight: 700;
+            font-size: 30px;
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+    &__login {
+        p {
+            font-size: 16px;
+            color: $text-black;
+            margin-bottom: 0;
+        }
+    }
+}
