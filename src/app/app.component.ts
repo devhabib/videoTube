@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchService } from './services/search.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'videoTube';
+  query = '';
+  constructor(private _searchService: SearchService) { }
+
+  onSearch(query: string) {
+    this._searchService.setQuery(query);
+  }
 }

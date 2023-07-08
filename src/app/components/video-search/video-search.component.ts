@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-video-search',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./video-search.component.scss']
 })
 export class VideoSearchComponent {
+  @Output() search = new EventEmitter<string>();
+  query = '';
 
-
+  onSubmit() {
+    this.search.emit(this.query);
+  }
 }

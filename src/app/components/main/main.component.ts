@@ -7,13 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
+  query = '';
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-
+  onSearch(query: string) {
+    this.query = query;
   }
-
 }

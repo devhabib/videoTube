@@ -1,7 +1,7 @@
 <section class="videos">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4" *ngFor="let item of videos">
+      <div class="col-lg-4" *ngFor="let item of filteredVideos">
         <div class="videos__card">
           <div class="videos__thumbnail" (click)="onVideoSelect(item)">
             <img [src]="item.thumbnailUrl" alt="" />
