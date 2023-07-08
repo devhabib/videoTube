@@ -6,7 +6,7 @@ import { MainComponent } from './components/main/main.component';
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
-  { path: 'video/:id', component: VideoWatchComponent }
+  { path: 'main/:id', component: VideoWatchComponent }
 ];
 
 @NgModule({

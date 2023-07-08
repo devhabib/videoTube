@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-4" *ngFor="let item of videos">
         <div class="videos__card">
-          <div class="videos__thumbnail">
+          <div class="videos__thumbnail" (click)="onVideoSelect(item)">
             <img [src]="item.thumbnailUrl" alt="" />
             <p>{{ item.duration }} Min</p>
           </div>

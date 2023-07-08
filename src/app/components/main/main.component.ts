@@ -8,25 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  videos: any[] = [];
-  filteredVideos: any[] = [];
 
-  constructor(private apiService: ApiService, private router: Router) { }
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.apiService.getData().subscribe(data => {
-      this.videos = data;
-      this.filteredVideos = data;
-    });
+
   }
 
-  performSearch(searchTerm: string): void {
-    this.filteredVideos = this.videos.filter(video =>
-      video.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }
-
-  navigateToVideo(videoId: string): void {
-    this.router.navigate(['/video', videoId]);
-  }
 }
