@@ -12,6 +12,6 @@ export class AppComponent {
   constructor(private _searchService: SearchService) { }
 
   onSearch(query: string) {
-    this._searchService.setQuery(query);
+    this.query = query;
   }
 }
