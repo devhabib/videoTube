@@ -9,7 +9,10 @@ export class VideoSearchComponent {
   @Output() search = new EventEmitter<string>();
   query = '';
 
-  onSubmit() {
-    this.search.emit(this.query);
+  onSubmit(event: Event) {
+    event.preventDefault();
+    if (this.query.trim() !== '') {
+      this.search.emit(this.query.trim());
+    }
   }
 }

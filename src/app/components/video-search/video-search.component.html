@@ -1,14 +1,15 @@
 <section class="search">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-lg-6">
-        <form (submit)="onSubmit()">
+        <form (submit)="onSubmit($event)" ngNoForm>
           <div class="search__content">
             <input
               type="search"
               placeholder="Search"
               [(ngModel)]="query"
               name="searchInput"
+              (keydown.enter)="onSubmit($event)"
             />
             <button class="primary__btn" type="submit">Search</button>
           </div>
